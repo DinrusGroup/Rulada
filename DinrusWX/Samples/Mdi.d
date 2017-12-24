@@ -12,7 +12,7 @@
 //-----------------------------------------------------------------------------
 
 import wx.wx;
-private import std.stdio;
+private import std.io;
 private import std.string;
 
 struct ArrayList /* for .NET compatibility */
@@ -160,14 +160,14 @@ struct ArrayList /* for .NET compatibility */
 		{
 			Bitmap[] bitmaps = new Bitmap[8];
 			
-			bitmaps[0] = new Bitmap( "../Samples/Mdi/bitmaps/new.xpm" );
-			bitmaps[1] = new Bitmap( "../Samples/Mdi/bitmaps/open.xpm" );
-			bitmaps[2] = new Bitmap( "../Samples/Mdi/bitmaps/save.xpm" );
-			bitmaps[3] = new Bitmap( "../Samples/Mdi/bitmaps/copy.xpm" );
-			bitmaps[4] = new Bitmap( "../Samples/Mdi/bitmaps/cut.xpm" );
-			bitmaps[5] = new Bitmap( "../Samples/Mdi/bitmaps/paste.xpm" );
-			bitmaps[6] = new Bitmap( "../Samples/Mdi/bitmaps/print.xpm" );
-			bitmaps[7] = new Bitmap( "../Samples/Mdi/bitmaps/help.xpm" );
+			bitmaps[0] = new Bitmap( "./data/bitmaps/new.xpm" );
+			bitmaps[1] = new Bitmap( "./data/bitmaps/open.xpm" );
+			bitmaps[2] = new Bitmap( "./data/bitmaps/save.xpm" );
+			bitmaps[3] = new Bitmap( "./data/bitmaps/copy.xpm" );
+			bitmaps[4] = new Bitmap( "./data/bitmaps/cut.xpm" );
+			bitmaps[5] = new Bitmap( "./data/bitmaps/paste.xpm" );
+			bitmaps[6] = new Bitmap( "./data/bitmaps/print.xpm" );
+			bitmaps[7] = new Bitmap( "./data/bitmaps/help.xpm" );
 			
 			int width = 24;
 			int currentX = 5;
@@ -301,7 +301,7 @@ struct ArrayList /* for .NET compatibility */
 			super( parent, -1, title, pos, size, style | wxNO_FULL_REPAINT_ON_RESIZE );
 			MyFrame.my_children.Add( this );
 
-			icon = new Icon( "../Samples/Mdi/mondrian.png" );
+			icon = new Icon( "./data/mondrian.png" );
 			
 			SetSizeHints( 100, 100 );
 			
